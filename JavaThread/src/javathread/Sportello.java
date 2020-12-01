@@ -21,6 +21,5 @@ public class Sportello implements Runnable{
     
     public void versa(int somma){
         conto.versa(somma);
-        System.out.println("Conto : "+conto.saldo());
     }
 }
