@@ -17,10 +17,12 @@ public class Conto {
         this.totale = totale;
     }
     
-    public void versa(int importo){
+    synchronized void versa(int importo){
         totale = totale + importo - tasse;
+        System.out.println("Conto : "+ totale);
     }
-    public int saldo(){
+    
+    synchronized int saldo(){
         return totale;
     }
             

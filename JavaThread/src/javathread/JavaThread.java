@@ -34,8 +34,7 @@ public class JavaThread {
         ProcessoRunnable p1 = new ProcessoRunnable("p1");
         p1.run();
         try {
-            T1.sleep(5000);
-            p1.stop();
+            Thread.sleep(5000);
         } catch (InterruptedException interruption) {
             Logger.getLogger(JavaThread.class.getName()).log(Level.SEVERE, null, interruption);
         }*/
@@ -50,7 +49,11 @@ public class JavaThread {
         genitore2.start();
         sport1.versa(500);
         sport2.versa(800);
-        
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException interruption) {
+//            Logger.getLogger(JavaThread.class.getName()).log(Level.SEVERE, null, interruption);
+//        }
     }
     
 }
