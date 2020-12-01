@@ -5,6 +5,9 @@
  */
 package javathread;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
@@ -22,7 +25,9 @@ public class JavaThread {
         
         try {
             T1.sleep(5000);
+            T1.stop();
         } catch (InterruptedException interruption) {
+            Logger.getLogger(JavaThread.class.getName()).log(Level.SEVERE, null, interruption);
         }
         //ProcessoRunnable p1 = new ProcessoRunnable("p1");
         //Thread t1 = new Thread(p1);
