@@ -9,7 +9,7 @@ package javathread;
  *
  * @author parrarodriguez.manue
  */
-public class Processo {
+public class Processo extends Thread{
     private String t1;
     
     public Processo(String printValue){
